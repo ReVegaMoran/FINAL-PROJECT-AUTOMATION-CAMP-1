@@ -1,9 +1,13 @@
-class footer {
-
-    elements = {
-
-          getFooter : () => cy.get('[id="page-footer"]'),
+class Footer {
+    getButtonByName(buttonName) {
+        return cy.contains('.footer-button', buttonName);
     }
-  }
 
-  module.exports = new footer();
+    get copyrightText() {
+        return cy.get('.copyright');
+    }
+
+    // Puedes agregar más métodos según tus necesidades
+}
+
+module.exports = new Footer();
