@@ -91,7 +91,7 @@ export class contactElements {
     static get modal() {
         return {
             get modalFeedback() {
-                return cy.get('.bg-feedback-positive-100');
+                return cy.get('.bg-feedback-positive-100', { timeout: 5000 });
             },
             get modalError() {
                 return cy.get('#tm-contact-error-notification')

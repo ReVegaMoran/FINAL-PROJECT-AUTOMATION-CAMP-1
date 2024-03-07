@@ -1,18 +1,19 @@
 import { detiledElements } from "../components/product-detailed-page/product-detailed-page-component";
 
-describe('Contact Us Form', () => {
+describe('Product Detailed Page', () => {
+    //Visit the URL: https://develop--studio-web-ee7fb9.netlify.app/new/the-spiral/birch for each test case
     beforeEach(() => {
         cy.visit('https://develop--studio-web-ee7fb9.netlify.app/new/the-spiral/birch');
     });
 
-    it('should navigate to Contact Us page and validate visual components', () => {
-        // Paso 2: Hacer clic en el botón "Contact Us"
+    it('Review the visual components of the form, such as title, capacity, and description', () => {
+        // Review the visual components of the form, such as title, capacity, and description
         detiledElements.contact.title.should('exist').and('be.visible');
         detiledElements.contact.subTitle.should('exist').and('be.visible');
         detiledElements.contact.description.should('exist').and('be.visible');
     });
-    it('segundo', () => {
-        // Paso 2: Hacer clic en el botón "Contact Us"
+    it('Review the visual components of the left panel', () => {
+        // Review the visual components of the left panel, such as the calendar component, duration, tabs for available spaces, and buttons for instant booking and inquiry.
         detiledElements.leftPanel.calendar.should('exist').and('be.visible');
         detiledElements.leftPanel.duration.should('exist').and('be.visible');
         detiledElements.leftPanel.tabsUpComing.should('exist').and('be.visible');
